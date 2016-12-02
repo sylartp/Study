@@ -1,9 +1,11 @@
 package com.GrappleGame.Web.POJO;
 
-import org.springframework.stereotype.Component;
 
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  * Created by tppppp on 2016/12/1.
@@ -13,6 +15,7 @@ public class User {
     @NotNull
     @Size(max = 15, min = 5)
     private String userName;
+
     @NotNull
     @Size(min = 5, max = 25)
     private String passWord;
@@ -32,4 +35,6 @@ public class User {
     public String getPassWord() {
         return passWord;
     }
+
+
 }

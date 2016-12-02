@@ -7,15 +7,24 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="sf" uri="http://www.springframework.org/tags/form" %>
+<%@taglib prefix="s" uri="http://www.springframework.org/tags" %>
 <html>
 <head>
     <title>Login</title>
+    <style type="text/css">
+        span.errors {
+            color: red;
+        }
+    </style>
 </head>
 <body>
-    <form method="post">
-        用户名:<input type="text" name="userName"/><br/>
-        密码:<input type="password" name="passWord"/><br/>
-        <input type="submit" value="登陆"/>
-    </form>
+<p1><s:message code="user.welcome"/></p1>
+<sf:form method="post" commandName="user">
+    用户名:<sf:input path="userName"/>
+    <sf:errors path="userName" cssClass="errors"/> <br/>
+    密码:<sf:input path="passWord"/>
+    <sf:errors path="passWord" cssClass="errors"/> <br/>
+    <input type="submit" value="登陆"/>
+</sf:form>
 </body>
 </html>

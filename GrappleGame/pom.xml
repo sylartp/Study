@@ -33,6 +33,11 @@
           <artifactId>spring-webmvc</artifactId>
           <version>4.3.4.RELEASE</version>
       </dependency>
+      <dependency>
+          <groupId>org.apache.commons</groupId>
+          <artifactId>commons-lang3</artifactId>
+          <version>3.4</version>
+      </dependency>
   </dependencies>
   <build>
     <finalName>GrappleGame</finalName>
