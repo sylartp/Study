@@ -9,7 +9,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
  * Created by tppppp on 2016/12/1.
  */
 @Configuration
-@ComponentScan(basePackages = {"com.GrappleGame"},
+@ComponentScan(basePackages = {"com.GrappleGame.Web"},
         excludeFilters = {
                 @ComponentScan.Filter(type = FilterType.ANNOTATION, value = EnableWebMvc.class)})
 public class RootConfig {

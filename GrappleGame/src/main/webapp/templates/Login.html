@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" content="text/html">
+    <title>登陆</title>
+</head>
+<body>
+<form th:method="post" th:object="${user}" enctype="multipart/form-data">
+    用户名:<input type="text" th:field="*{userName}"><br/>
+    密码:<input type="password" th:field="*{passWord}"><br/>
+    上传图片:<input type="file" name="profilePicture"
+                accept="image/jpg,image/gif,image/png"><br/>
+    <input type="submit" value="登陆">
+</form>
+</body>
+</html>

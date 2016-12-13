@@ -12,13 +12,30 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  */
 
 public class User {
-    @NotNull
-    @Size(max = 15, min = 5)
+
     private String userName;
 
-    @NotNull
-    @Size(min = 5, max = 25)
     private String passWord;
+
+    private String pictureName;
+
+    private String path;
+
+    public String getPath() {
+        return path;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
+    }
+
+    public String getPictureName() {
+        return pictureName;
+    }
+
+    public void setPictureName(String pictureName) {
+        this.pictureName = pictureName;
+    }
 
     public void setUserName(String userName) {
         this.userName = userName;

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Show</title>
+</head>
+<body>
+<table th:object="${user}">
+    <tr>
+        <td th:text="${user.userName}"/>
+        <td th:text="${user.passWord}"/>
+        <td th:text="${user.pictureName}"></td>
+        <td th:text="${user.path}"></td>
+        <td><img src="../data/tppppp.jpg"/></td>
+    </tr>
+</table>
+<img src="../data/tppppp.jpg"/>
+</body>
+</html>
