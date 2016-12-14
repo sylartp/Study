@@ -1,5 +1,6 @@
 package com.GrappleGame.Web.Controller;
 
+import com.GrappleGame.Web.Exception.TestException;
 import com.GrappleGame.Web.POJO.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -23,6 +24,10 @@ public class UserController {
     public String Login(Model model) {
         User user = new User();
         model.addAttribute(user);
+//        user =null;
+//        if(user==null){
+//            throw  new TestException();
+//        }
         return "Login";
     }
 
@@ -33,10 +38,10 @@ public class UserController {
         path = path.substring(path.indexOf('/'));
         System.out.print(path);
         user.setPictureName(profilePicture.getOriginalFilename());
-        user.setPath(path+profilePicture.getOriginalFilename());
+        user.setPath(path + profilePicture.getOriginalFilename());
         model.addAttribute("user", user);
         profilePicture.transferTo(new File("/Users/tppppp/Documents/Study/GrappleGame/src/main/webapp/data/"
-                        + profilePicture.getOriginalFilename()));
+                + profilePicture.getOriginalFilename()));
         return "Show";
     }
 }
