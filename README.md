@@ -1,1 +1,1 @@
-Just share some easy algorithms Java when i studied Java.
+Just share some easy algorithms Java after i studied java
